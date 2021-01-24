@@ -1,0 +1,29 @@
+{
+  "id": "example-custom-qounter",
+  "name": "Example Custom Qounter",
+  "version": "0.1.0",
+  "author": "@danrouse#0214",
+  "description": [
+    "Example implementation of a Custom Qounter addon for Qounters-"
+  ],
+  "category": "Gameplay",
+  "gameVersion": "1.13.2",
+  "platform": "Quest",
+  "components": [
+    {
+      "type": "HookMod",
+      "installAction": {
+        "installLibraryFile": "libexample-custom-qounter.so"
+      },
+      "uninstallAction": {
+        "removeLibraryFile": "libexample-custom-qounter.so"
+      }
+    },
+    {
+      "type": "HookModLibrary",
+      "installAction": {
+        "installLibraryFile": "libbeatsaber-hook_1_0_10.so"
+      }
+    }
+  ]
+}
