@@ -29,7 +29,7 @@ extern "C" void setup(ModInfo& info) {
 
 // Called later on in the game loading - a good time to install function hooks
 extern "C" void load() {
-    Modloader::requireMod("qounters-minus", "0.2.1");
+    Modloader::requireMod("qounters-minus", QOUNTERS_MINUS_VERSION);
     il2cpp_functions::Init();
 
     custom_types::Register::RegisterType<ExampleCustomQounter::Qounter>();

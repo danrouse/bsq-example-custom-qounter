@@ -26,12 +26,11 @@ LOCAL_EXPORT_C_INCLUDES := extern/beatsaber-hook
 LOCAL_SRC_FILES := extern/libbeatsaber-hook_1_0_10.so
 LOCAL_CPP_FEATURES += exceptions
 include $(PREBUILT_SHARED_LIBRARY)
-
-# qounters-minus
+# Creating prebuilt for dependency: qounters-minus - version: 0.2.2
 include $(CLEAR_VARS)
-LOCAL_MODULE := qounters-minus
+LOCAL_MODULE := qounters-minus_0_2_2
 LOCAL_EXPORT_C_INCLUDES := extern/qounters-minus
-LOCAL_SRC_FILES := extern/libqounters-minus.so
+LOCAL_SRC_FILES := extern/libqounters-minus_0_2_2.so
 include $(PREBUILT_SHARED_LIBRARY)
 # Creating prebuilt for dependency: custom-types - version: 0.4.3
 include $(CLEAR_VARS)
@@ -68,7 +67,7 @@ LOCAL_SHARED_LIBRARIES += beatsaber-hook_1_0_10
 LOCAL_SHARED_LIBRARIES += custom-types
 LOCAL_SHARED_LIBRARIES += codegen_0_6_1
 LOCAL_SHARED_LIBRARIES += questui
-LOCAL_SHARED_LIBRARIES += qounters-minus
+LOCAL_SHARED_LIBRARIES += qounters-minus_0_2_2
 LOCAL_LDLIBS += -llog
 LOCAL_CFLAGS += -I'extern/libil2cpp/il2cpp/libil2cpp' -DID='"example-custom-qounter"' -DVERSION='"0.1.0"' -I'./shared' -I'./extern' -isystem'extern/codegen/include'
 LOCAL_CPPFLAGS += -std=c++2a

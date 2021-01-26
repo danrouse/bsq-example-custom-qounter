@@ -20,12 +20,12 @@ Example implementation of a Custom Qounter addon for Qounters-.
     - References to some commonly-used game components are stored in `this->refs` (see [InjectedComponents](https://github.com/danrouse/bsq-qounters-minus/blob/main/src/InjectedComponents.cpp))
     - All other [UnityEngine.MonoBehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) methods can be defined
 - For configuration, specify your configurable variables as static fields on your custom type
-    - By convention, please include `bool Enabled, int Position, int Distance` following the boilerplate shown here
+    - The following configs **must** be defined as static fields on your class: `bool Enabled, int Position, int Distance`. However, they do *not* need to be Registered.
 - In your mod's `load()` entry point:
     - Ensure Qounters- is loaded by calling `Modloader::requireMod("qounters-minus", QOUNTERS_MINUS_VERSION);`
     - Register with custom-types `custom_types::Register::RegisterType<YourCustomQounterType>();`
     - Register your Qounter `QountersMinus::QounterRegistry::Register<YourCustomQounterType>(std::string shortName, std::string fullName, std::string configKey)`
-    - Register your configuration with `QountersMinus::QounterRegistry::RegisterConfig<YourCustomQounterType>(configMetadata)` (see [src/ExampleCustomQounter.cpp](src/ExampleCustomQounter.cpp) for example usage or [QounterRegistry.hpp](https://github.com/danrouse/bsq-qounters-minus/blob/main/shared/QounterRegistry.hpp#L31) for all options)
+    - Register your configuration with `QountersMinus::QounterRegistry::RegisterConfig<YourCustomQounterType>(configMetadata)` (see [QounterRegistry.hpp](https://github.com/danrouse/bsq-qounters-minus/blob/main/shared/QounterRegistry.hpp#L31) for all options, or browse through the base Qounters- Qounters for examples)
 
 ## Credits
 

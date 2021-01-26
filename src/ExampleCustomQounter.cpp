@@ -8,21 +8,6 @@ int ExampleCustomQounter::Qounter::Distance = 1;
 
 void ExampleCustomQounter::Qounter::Register() {
     QountersMinus::QounterRegistry::Register<ExampleCustomQounter::Qounter>("Example", "Example Custom Qounter", "ExampleCustomConfig");
-    QountersMinus::QounterRegistry::RegisterConfig<ExampleCustomQounter::Qounter>({
-        .ptr = &Enabled,
-        .field = "Enabled",
-    });
-    QountersMinus::QounterRegistry::RegisterConfig<ExampleCustomQounter::Qounter>({
-        .ptr = &Position,
-        .field = "Position",
-        .enumNumElements = QountersMinus::QounterPositionCount,
-        .enumDisplayNames = QountersMinus::QounterPositionNames,
-        .enumSerializedNames = QountersMinus::QounterPositionLookup,
-    });
-    QountersMinus::QounterRegistry::RegisterConfig<ExampleCustomQounter::Qounter>({
-        .ptr = &Distance,
-        .field = "Distance",
-    });
 }
 
 void ExampleCustomQounter::Qounter::Start() {
