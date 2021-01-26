@@ -2,10 +2,11 @@
 
 Example implementation of a Custom Qounter addon for Qounters-.
 
-## Requirements
+## Requirements (qpm)
 - codegen
 - custom-types
 - questui
+- qounters-minus
 
 ## Guide
 - Create a custom type extending QountersMinus::Qounter
